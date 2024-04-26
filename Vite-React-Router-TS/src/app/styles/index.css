@@ -1,0 +1,52 @@
+@import url(null.css);
+
+:root {
+  /* Ширина макета */
+  --max-width: 1920px;
+  /* Минимальная ширина страницы */
+  --min-width: 320px;
+  /* Ширина ограничивающего контейнера (0 = нет ограничения) */
+  --max-width-container: 1850px;
+  /* Боковой отступ у контейнера */
+  --container-padding: 15px;
+}
+
+[class*='__container'] {
+  max-width: var(--max-width-container);
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
+  box-sizing: content-box;
+
+  @media (max-width: 992px) {
+    max-width: 750px;
+  }
+
+  @media (max-width: 575px) {
+    max-width: none;
+    padding: 0 15px;
+  }
+}
+
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+
+  /* Прижимаем футер */
+  display: flex;
+  flex-direction: column;
+  > main {
+    flex: 1 1 auto;
+  }
+  .layout_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 90vh;
+
+    margin: 25px 0;
+    padding: 0 15px;
+  }
+}
