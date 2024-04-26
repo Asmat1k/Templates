@@ -1,0 +1,19 @@
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__title {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
